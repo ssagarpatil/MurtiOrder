@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "168659753541",
+    "project_id": "murtiorder",
+    "storage_bucket": "murtiorder.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168659753541:android:d6a871e1c19b2c77ffa12c",
+        "android_client_info": {
+          "package_name": "com.murti.murtiorder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-P19QAuMbrwhUocnXI_yd8dQYW-ygzr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
