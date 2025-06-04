@@ -31,12 +31,16 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
     @Override
     public void onBindViewHolder(@NonNull OrderViewHolder holder, int position) {
         OrderModel order = orderList.get(position);
-
-        holder.tvCustomerName.setText("ग्राहक: " + order.getCustomerName());
-        holder.tvMurtiType.setText("प्रकार: " + order.getMurtiType());
-        holder.tvSize.setText("आकार: " + order.getSize());
-        holder.tvPrice.setText("किंमत: ₹" + order.getPrice());
-        holder.tvDeliveryDate.setText("डिलिव्हरी दिनांक: " + order.getDeliveryDate());
+        holder.txtCustomerName.setText("नाव: " + order.customerName);
+        holder.txtMobile.setText("मोबाईल: " + order.mobileNumber);
+        holder.txtMurtiType.setText("प्रकार: " + order.murtiType);
+        holder.txtHeight.setText("उंची: " + order.height);
+        holder.txtQuantity.setText("प्रमाण: " + order.quantity);
+        holder.txtTotal.setText("एकूण: ₹" + order.totalAmount);
+        holder.txtPaid.setText("भरलेले: ₹" + order.paidAmount);
+        holder.txtRemaining.setText("शिल्लक: ₹" + order.remainingAmount);
+        holder.txtDelivery.setText("डिलिव्हरी: " + order.deliveryDate);
+        holder.txtStatus.setText("स्थिती: " + order.orderStatus);
     }
 
     @Override
@@ -45,15 +49,22 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
     }
 
     public static class OrderViewHolder extends RecyclerView.ViewHolder {
-        TextView tvCustomerName, tvMurtiType, tvSize, tvPrice, tvDeliveryDate;
+
+        TextView txtCustomerName, txtMobile, txtMurtiType, txtHeight, txtQuantity,
+                txtTotal, txtPaid, txtRemaining, txtDelivery, txtStatus;
 
         public OrderViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvCustomerName = itemView.findViewById(R.id.tvCustomerName);
-            tvMurtiType = itemView.findViewById(R.id.tvMurtiType);
-            tvSize = itemView.findViewById(R.id.tvSize);
-            tvPrice = itemView.findViewById(R.id.tvPrice);
-            tvDeliveryDate = itemView.findViewById(R.id.tvDeliveryDate);
+            txtCustomerName = itemView.findViewById(R.id.txtCustomerName);
+            txtMobile = itemView.findViewById(R.id.txtMobile);
+            txtMurtiType = itemView.findViewById(R.id.txtMurtiType);
+            txtHeight = itemView.findViewById(R.id.txtHeight);
+            txtQuantity = itemView.findViewById(R.id.txtQuantity);
+            txtTotal = itemView.findViewById(R.id.txtTotal);
+            txtPaid = itemView.findViewById(R.id.txtPaid);
+            txtRemaining = itemView.findViewById(R.id.txtRemaining);
+            txtDelivery = itemView.findViewById(R.id.txtDelivery);
+            txtStatus = itemView.findViewById(R.id.txtStatus);
         }
     }
 }

@@ -36,19 +36,17 @@ public class OrderListActivity extends AppCompatActivity {
         orderAdapter = new OrderAdapter(this, orderList);
         recyclerOrders.setAdapter(orderAdapter);
 
-        ordersRef = FirebaseDatabase.getInstance().getReference().child("orders");
+        ordersRef = FirebaseDatabase.getInstance().getReference("orders");
 
         ordersRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 orderList.clear();
 
-                for (DataSnapshot mobileNode : snapshot.getChildren()) {
-                    for (DataSnapshot orderSnapshot : mobileNode.getChildren()) {
-                        OrderModel order = orderSnapshot.getValue(OrderModel.class);
-                        if (order != null) {
-                            orderList.add(order);
-                        }
+                for (DataSnapshot mobileSnapshot : snapshot.getChildren()) {
+                    OrderModel order = mobileSnapshot.getValue(OrderModel.class);
+                    if (order != null) {
+                        orderList.add(order);
                     }
                 }
 
@@ -57,7 +55,7 @@ public class OrderListActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(OrderListActivity.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(OrderListActivity.this, "डेटा लोड करण्यात अडचण: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

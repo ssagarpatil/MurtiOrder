@@ -1,48 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF"
     android:layout_margin="8dp"
-    android:elevation="4dp"
-    app:cardCornerRadius="12dp"
-    android:padding="12dp">
+    android:elevation="2dp"
+    android:backgroundTint="#FAFAFA">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/txtCustomerName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:text="नाव"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:paddingBottom="4dp" />
 
-        <TextView
-            android:id="@+id/tvCustomerName"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:text="ग्राहक"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginBottom="8dp" />
 
-        <TextView
-            android:id="@+id/tvMurtiType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="प्रकार"/>
+    <TextView
+        android:id="@+id/txtMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="मोबाईल: 9876543210"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:paddingBottom="2dp" />
 
-        <TextView
-            android:id="@+id/tvSize"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="आकार"/>
+    <TextView
+        android:id="@+id/txtMurtiType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="मूर्ती प्रकार: गणपती"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:paddingBottom="2dp" />
 
-        <TextView
-            android:id="@+id/tvPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="किंमत"/>
+    <TextView
+        android:id="@+id/txtHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="उंची: 3 फूट"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:paddingBottom="2dp" />
 
-        <TextView
-            android:id="@+id/tvDeliveryDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="डिलिव्हरी दिनांक"/>
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/txtQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="प्रमाण: 2"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:paddingBottom="2dp" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="एकूण: ₹5000"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:paddingBottom="2dp" />
+
+    <TextView
+        android:id="@+id/txtPaid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="भरलेली रक्कम: ₹3000"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:paddingBottom="2dp" />
+
+    <TextView
+        android:id="@+id/txtRemaining"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="शिल्लक: ₹2000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#D32F2F"
+        android:paddingBottom="2dp" />
+
+    <TextView
+        android:id="@+id/txtDelivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="डिलिव्हरी: 15 ऑगस्ट"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:paddingBottom="2dp" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="स्थिती: प्रलंबित"
+        android:textSize="14sp"
+        android:textColor="#FFA000"
+        android:textStyle="bold" />
+</LinearLayout>
