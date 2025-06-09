@@ -4,8 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#FAFAFA">
+    android:padding="20dp"
+    android:background="#E3F2FD">
 
     <!-- Title -->
     <TextView
@@ -13,10 +13,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="मूर्ती ऑर्डर ट्रॅकर"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:textColor="#333"
+        android:textColor="#212121"
         android:gravity="center"
+        android:letterSpacing="0.02"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="32dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -28,7 +31,7 @@
         android:layout_height="0dp"
         android:columnCount="2"
         android:rowCount="2"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:alignmentMode="alignMargins"
         android:columnOrderPreserved="false"
         android:useDefaultMargins="true"
@@ -41,13 +44,17 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardAddOrder"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="160dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:clickable="true"
+            android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="8dp">
+            app:cardElevation="6dp"
+            app:cardCornerRadius="12dp"
+            android:translationZ="4dp"
+            android:backgroundTint="#FFFFFF"
+            android:transitionName="card_add_order">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -57,18 +64,21 @@
                 android:padding="16dp">
 
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
                     android:src="@android:drawable/ic_input_add"
-                    app:tint="#3F51B5" />
+                    app:tint="#3F51B5"
+                    android:scaleType="centerInside"
+                    android:alpha="0.9" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="नवीन ऑर्डर"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="#3F51B5"
-                    android:layout_marginTop="8dp" />
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="12dp" />
 
             </LinearLayout>
 
@@ -78,13 +88,17 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardViewOrders"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="160dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:clickable="true"
+            android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="8dp">
+            app:cardElevation="6dp"
+            app:cardCornerRadius="12dp"
+            android:translationZ="4dp"
+            android:backgroundTint="#FFFFFF"
+            android:transitionName="card_view_orders">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -94,18 +108,21 @@
                 android:padding="16dp">
 
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
                     android:src="@android:drawable/ic_menu_agenda"
-                    app:tint="#009688" />
+                    app:tint="#009688"
+                    android:scaleType="centerInside"
+                    android:alpha="0.9" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="सगळे ऑर्डर"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="#009688"
-                    android:layout_marginTop="8dp" />
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="12dp" />
 
             </LinearLayout>
 
@@ -115,13 +132,17 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardReports"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="160dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:clickable="true"
+            android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="8dp">
+            app:cardElevation="6dp"
+            app:cardCornerRadius="12dp"
+            android:translationZ="4dp"
+            android:backgroundTint="#FFFFFF"
+            android:transitionName="card_reports">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -131,18 +152,21 @@
                 android:padding="16dp">
 
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
                     android:src="@android:drawable/ic_menu_info_details"
-                    app:tint="#FF5722" />
+                    app:tint="#FF5722"
+                    android:scaleType="centerInside"
+                    android:alpha="0.9" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="उत्पन्न अहवाल"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="#FF5722"
-                    android:layout_marginTop="8dp" />
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="12dp" />
 
             </LinearLayout>
 
@@ -152,13 +176,17 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardInventory"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="160dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:clickable="true"
+            android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="8dp">
+            app:cardElevation="6dp"
+            app:cardCornerRadius="12dp"
+            android:translationZ="4dp"
+            android:backgroundTint="#FFFFFF"
+            android:transitionName="card_inventory">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -168,18 +196,21 @@
                 android:padding="16dp">
 
                 <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
                     android:src="@android:drawable/ic_menu_sort_by_size"
-                    app:tint="#607D8B" />
+                    app:tint="#607D8B"
+                    android:scaleType="centerInside"
+                    android:alpha="0.9" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="स्टॉक"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="#607D8B"
-                    android:layout_marginTop="8dp" />
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="12dp" />
 
             </LinearLayout>
 
